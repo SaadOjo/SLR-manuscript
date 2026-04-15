@@ -32,7 +32,13 @@
 *.xmpi
 *.bak
 *.swp
+*.spl
 *~
+
+# Local build outputs
+main-ijim-di.pdf
+main-ijipm.pdf
+Complete_Manuscript.pdf
 
 # Local archive used for extraction
 AI_x_Customer_Churn_Prediction___SLR.zip

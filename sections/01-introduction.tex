@@ -1,0 +1,65 @@
+\section{Introduction}
+\label{sec:introduction}
+
+% This section does not so far include any text that refers to the number of studies. 
+
+%\begin{itemize}[itemsep=0pt, label=-]
+%    \item Define the context and the goal of our study
+%    \item Synthesize how we targeted our goal (by conducting an SLR and by answering how many RQs...)
+%    \item Motivate our study (summarizing what emerged from the exploratory study about published SLRs on the specific topic of our interest) 
+%    \item Summarize the main contribution of the study
+%    \item Introduce the paper structure.
+%\end{itemize}
+
+In recent years, the retail sector has gone through significant transformations. \textcolor{blue}{This transformation}, primarily driven by the wide and fast adoption of digital technologies \cite{REINARTZ2019350}\textcolor{blue}{, has moved retail from the} traditional physical stores to dynamic channel environments\textcolor{blue}{with ever-increasing focus on the online retail channel. While this evolution has brought opportunities, including broad customer reach, it has also introduced new challenges.}
+
+\textcolor{blue}{One such challenge is the lower barrier for customers to switch retailers. 
+% Instead of CHURN, provide a different name to explain its meaning
+Historically, shopping was largely local, with small retailers serving specific neighborhoods, naturally limiting customer movement and making customer defection less of a concern. However, the advent and rapid growth of e-commerce have made location-based convenience less relevant. Furthermore, e-commerce platforms have enabled consumers to effortlessly compare prices across retailers \cite{matuszelanski2022customer, Digitalization-of-retailing-Hagberg}, which has further intensified competition. The aforementioned barrier is further reduced by the the rise of large retailers and supermarkets, which have standardized product offerings \cite{basker2012supersize, Reinartz2003TheIO}. As a result, a unique product selection is no longer a strong reason to prefer one option over another. Consequently, the likelihood of customer churn has increased significantly, making accurate churn prediction and proactive retention strategies indispensable.}
+
+\begin{comment}
+    Customer churn, the phenomenon of customers discontinuing their relationship with a business \cite{Zero-defections-Reichheld}, has become a critical area of concern due to its substantial impact on profitability and sustainability.
+The recognition of customer retention as a key factor for financial success dates back to foundational studies like those of Reichheld and Sasser (1990), who emphasized the financial advantage of retaining existing customers over acquiring new ones, highlighting that even minor improvements in retention rates could lead to substantial increases in profits. This concept grows bigger with the advancement of digital technologies, facilitating unprecedented levels of data acquisition from both offline and online customer interactions. Retailers now have extensive datasets comprising purchase histories, customer interactions, and feedback, enabling more sophisticated and predictive insights into consumer behavior.
+\end{comment}
+
+The increased digitization of the retail sector\textcolor{blue}{, however, also provides a means to address the churn problem.} Large volumes of \textcolor{blue}{customer interaction data and purchase histories are now stored digitally in retailers' data warehouses.} This \textcolor{blue}{enables the training and deployment of AI and machine learning methods for the early detection of potential churners and for the development of targeting marketing intervention.}
+In the early 2000s, customer churn prediction leveraging machine learning and AI has seen considerable application, initially in industries with contractual customer relationships, such as telecommunications \cite{Predicting-subscriber-dissatisfaction-Mozer}. 
+
+The effectiveness of AI-driven churn prediction in contractual scenarios prompted its exploration in non-contractual retail environments, characterized by partial or gradual defection, where customers do not formally terminate relationships, but reduce their interactions or purchases over time \cite{S37-ID826-Buckinx}. 
+Predicting partial churn, particularly among behaviorally loyal customers, emerged as an important yet challenging goal, as these subtle shifts in consumer behavior often precede complete defection.
+
+
+% would be good to cite this. 
+
+\textcolor{blue}{The retail sector is the connection between industries and consumers, accounting for 5\% of GDP and employing 1 in 12 workers in the OECD member countries \cite{OECD2020}.  
+Considering both the macroeconomic weight and the economic implications, focusing on churn prediction in the retail sector is particularly relevant.
+Reichheld and Sasser show that even small improvements in customer retention can have substantial financial effects. In fact, with a 5\% increase in retention rates, the profit can increase in the order of 25-95\% across a wide range of business contexts \cite{Zero-defections-Reichheld}.}
+\textcolor{blue}{Against this background, an initial exploratory study conducted by our research group highlighted the relative scarcity of systematic literature reviews explicitly focused on the retail sector, motivating the present work, which, to the best of our knowledge, is} the first systematic literature review (SLR) dedicated exclusively to AI-based churn prediction in non-contractual retail environments.
+
+The goal of this SLR is therefore to identify, analyze, and synthesize the current state of research on the application of AI to customer churn prediction in the retail sector. 
+%Following a rigorous methodology inspired by the guidelines of \cite{Kitchenham-Charters-guidelines}, 
+In particular, our objective was to explore several dimensions of churn prediction, including definitions of churn, effective AI techniques, available datasets, feature engineering practices, performance metrics, challenges faced, and future research directions proposed by the surveyed studies. %existing predictive models. 
+To achieve this goal, we designed and executed a rigorous research protocol inspired by the guidelines of Kitchenham and Charter \cite{Kitchenham-Charters-guidelines}. The protocol includes research questions (RQs), a search string, a selection of relevant digital libraries, a set of inclusion and exclusion criteria, quality assessment criteria, and a data extraction form to collect evidence for answering the RQs. The protocol was executed on January 31, 2025, and, from an initial set of 1,370 articles, 41 primary studies were selected and analyzed.  \\
+%three publication space research questions (PS-RQs) and eight research space research questions (RS-RQs), addressing in this way both the bibliometric information of how and where the topic is being published, and the technical world of how customer churn prediction in retail is being approached, modeled, and evaluated through AI techniques, thereby offering a comprehensive overview of the literature landscape.
+
+\noindent The main contributions of this study are as follows: 
+\begin{itemize}[itemsep=0pt]
+\item it provides a comprehensive review of the research on AI-based churn prediction methods in non-contractual retail environments;
+\item it highlights effective AI techniques and predictive features tailored to retail contexts;
+\item it discusses the main challenges faced, including data imbalance and model explainability;
+\item it identifies gaps and future research directions.
+\end{itemize}
+
+
+
+Ultimately, our review provides a valuable resource for both academics and practitioners, and offers guidance for future research and practical applications aimed at improving customer retention in this rapidly evolving research topic.
+
+The rest of the paper is organized as follows: Section \ref{sec:background} provides essential background and defines key concepts related to customer churn and the AI techniques applied to churn prediction over time. 
+Section \ref{sec:methodology} describes the research method in detail, including the protocol definition (Section \ref{subsec:protocol-definition}) and its execution (Section \ref{subsec:protocol-execution}).
+%, subdivided into Section \ref{sec:protocol-definition}  defining the research protocol, inclusion/exclusion criteria, and quality assessment, and Section \ref{sec:protocol-execution} outlining the actual execution of the protocol and data extraction. 
+Section \ref{sec:results} presents the findings of our SLR, while Section \ref{sec:discussion} provides additional analysis and contextual reflections. 
+%which are then discussed in Section \ref{sec:discussion}. 
+Section  \ref{sec:threats-to-validity} analyzes potential limitations and threats to validity.
+Finally, Section \ref{sec:conclusions} concludes the paper by summarizing our main insights and proposing directions for future research. 
+
+%\input{tables/01-survey-comparison}

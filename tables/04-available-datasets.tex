@@ -1,0 +1,47 @@
+\begin{table}[h!]
+\centering
+\caption{Available datasets.}
+\label{table:available_datasets}
+%{\fontfamily{phv}\selectfont   % inizio gruppo → Helvetica/Arial-like
+    \tiny                 % o \footnotesize, \small…
+\resizebox{1\textwidth}{!}{
+\begin{tabular}{
+  |>{\centering\arraybackslash}p{0.1cm}
+  |>{\centering\arraybackslash}p{1.8cm}
+  |>{\centering\arraybackslash}p{0.7cm}
+  |>{\centering\arraybackslash}p{1.3cm}
+  |>{\centering\arraybackslash}p{1.3cm}
+  |>{\centering\arraybackslash}p{1.1cm}
+  |>{\centering\arraybackslash}p{2cm}
+  |>{\centering\arraybackslash}p{1.8cm}
+  |>{\centering\arraybackslash}p{0.7cm}
+  |>{\centering\arraybackslash}p{0.7cm}
+  |>{\centering\arraybackslash}p{0.7cm}
+  |}
+\hline
+\rowcolor[HTML]{D9EAD3} 
+      \multicolumn{1}{|c|}{\textbf{ID}}
+      & \textbf{Dataset name}
+      & \textbf{\begin{tabular}[c]{@{}c@{}}Pub.\\year\end{tabular}}
+      & \textbf{\begin{tabular}[c]{@{}c@{}}Retail\\sector\end{tabular}}
+      & \textbf{\begin{tabular}[c]{@{}c@{}}Synthetic/\\Real\end{tabular}}
+      & \textbf{\begin{tabular}[c]{@{}c@{}}Online/\\Physical\end{tabular}}
+      & \textbf{\begin{tabular}[c]{@{}c@{}}Features\\categories\end{tabular}}
+      & \textbf{\begin{tabular}[c]{@{}c@{}}Dataset\\size\end{tabular}}
+      & \textbf{\begin{tabular}[c]{@{}c@{}}Churn\\Flag\end{tabular}}
+      & \textbf{\begin{tabular}[c]{@{}c@{}}Churn\\Rate\end{tabular}}
+      & \textbf{\begin{tabular}[c]{@{}c@{}}Study\\IDs\end{tabular}}\\ \hline
+\multicolumn{1}{|c|}{\sid{D1}} & \begin{tabular}[c]{@{}c@{}}Brazilian \\ e-commerce \\ public dataset \\ by Olist \\ \cite{Dat1-olist2018brazilian}\end{tabular} & 2018 & \begin{tabular}[c]{@{}c@{}}fashion, \\ mobile, \\ electronics, \\ appliance, \\ etc.\end{tabular} & Real & Online & Transactional & \# Orders: 100k & F & NA & \begin{tabular}[c]{@{}c@{}}S3,\\ S5,\\S10,\\ S20\end{tabular} \\ \hline
+\sid{D2} & \begin{tabular}[c]{@{}c@{}}E-commerce \\ customer \\ churn analysis \\ and prediction \\ \cite{Dat2-verma2021ecommerce}\end{tabular} & 2021 & NA & NA & Online & \begin{tabular}[c]{@{}c@{}}Geodemographic, \\ Demographic,\\ Behavioural,\\ Transactional,\\ Interactional\end{tabular} & \# Rows: 5630 & T & 20.24\% & S7 \\ \hline
+\sid{D3} & Online Retail II \cite{Dat3-uci2021online}& 2012 & gift-ware & Real & Online & Transactional & \begin{tabular}[c]{@{}c@{}}\# Instances: \\ 1,067M\end{tabular} & F & NA & S5, S8 \\ \hline
+\sid{D4} & \begin{tabular}[c]{@{}c@{}}Retailrocket \\ recommender\\  system dataset \\ \cite{Dat4-retailrocket2017dataset}\end{tabular} & 2022 & \begin{tabular}[c]{@{}c@{}}fashion, \\ mobile, \\ electronics, \\ appliance, \\ etc\end{tabular} & Real & Online & \begin{tabular}[c]{@{}c@{}}Behavioural, \\ Transactional\end{tabular} & \begin{tabular}[c]{@{}c@{}}\# Events: 2,7M\\ \# Unique \\ Visitors: 1,4M\\ \# Product \\ Information: \\ 20M\\ \# Unique Items: \\ 417k\end{tabular} & F & NA & S26, S29 \\ \hline
+\sid{D5} & \begin{tabular}[c]{@{}c@{}}Pakistan's \\ largest \\ e-commerce \\ dataset \\ \cite{Dat5-usmani2020pakistan}\end{tabular} & \begin{tabular}[c]{@{}c@{}}2020/\\ 2021\end{tabular} & \begin{tabular}[c]{@{}c@{}}fashion, \\ mobile, \\ electronics, \\ appliance, \\ etc.\end{tabular} & Real & Online & Transactional & \begin{tabular}[c]{@{}c@{}}\# Transactions: \\ 500K\end{tabular} & F & NA & S8 \\ \hline
+\sid{D6} & \begin{tabular}[c]{@{}c@{}}Retail \\ Transaction \\ Data \\ \cite{Dat6-regivm2021retail}\end{tabular} & \begin{tabular}[c]{@{}c@{}}2017/\\ 2018\end{tabular} & NA & Synthetic & NA & Transactional & \begin{tabular}[c]{@{}c@{}}\# Transactions: \\ 125K\end{tabular} & F & NA & S25 \\ \hline
+\sid{D7} & Carbo-loading \cite{Dat7-dunnhumby2021source} & \begin{tabular}[c]{@{}c@{}}Last \\ update: \\ 2023\end{tabular} & Food & Real & \begin{tabular}[c]{@{}c@{}}Offline \\ (Brick and \\ Mortar)\end{tabular} & NA & \begin{tabular}[c]{@{}c@{}}\# Transactions: \\ 5M+\end{tabular} & F & NA & S24 \\ \hline
+\sid{D8} & \begin{tabular}[c]{@{}c@{}}The complete \\ journey \\ \cite{Dat8-dunnhumby2021source} \end{tabular} & NA & Food & Real & \begin{tabular}[c]{@{}c@{}}Offline \\ (Brick and \\ Mortar)\end{tabular} & NA & \begin{tabular}[c]{@{}c@{}}\# Transactions: \\ 10M+\end{tabular} & F & NA & S24 \\ \hline
+\sid{D9} & A-feng dataset \cite{Dat9-recsyswiki2015grocery} & \begin{tabular}[c]{@{}c@{}}Last\\ update: \\ 2015\end{tabular} & Food & Real & \begin{tabular}[c]{@{}c@{}}Offline \\ (Brick and \\ Mortar)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Geodemographic, \\ Demographic, \\ Transactional\end{tabular} & \begin{tabular}[c]{@{}c@{}}\# Transactions: \\ 817K\\ \# Users: 32k\\ \# Items: 23,8K\end{tabular} & NA & NA & S28 \\ \hline
+\end{tabular}
+}
+%  }% fine gruppo → torna al font normale qui
+\end{table}
+\FloatBarrier

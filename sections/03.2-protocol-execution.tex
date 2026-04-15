@@ -1,0 +1,43 @@
+\subsection{Protocol execution}
+\label{subsec:protocol-execution}
+This section provides an overview of the study conduction, following the protocol designed in Section \ref{subsec:protocol-definition}. Specifically, we first provide details about
+the selection process and quality assessment of the included papers, followed by details on the data extraction process.
+
+
+\subsubsection{Studies Selection Process} 
+The process followed to select primary studies is illustrated in Figure \ref{fig:selection-process}. The Figure depicts the sequence of executed steps and their outcomes in terms of retrieved, discarded, and finally selected papers. 
+
+\begin{enumerate}
+\item \textit{Querying of digital libraries}: In this initial step, the search strings (introduced in Section \ref{subsec:protocol-definition}) were used to query the four digital libraries selected for our SLR (ACM, IEEE Xplore, Scopus, and WoS). No restrictions were applied on the publication year during the search, which was conducted on January 31st, 2025, resulting in a total of $1,370$ records.
+
+\item \textit{Removal of duplicate records}: From the initial $1,370$ retrieved records, \textbf{316} duplicate entries were identified and removed, leaving $1,054$ studies for  screening.
+
+\item \textit{Application of Inclusion and Exclusion Criteria (IC/EC) — first step}: The remaining 1,054 records were split into two groups, and their titles, abstracts, and metadata were independently screened by two researchers applying all IC and EC defined, except for EC6 and IC2, which require full-text analysis. During this phase, $912$ studies were excluded by mutual agreement, resulting in $142$ studies progressing to the next step.
+
+\item \textit{Application of IC and EC on full texts}: The $142$ papers were divided between the two researchers, who performed a full-text assessment applying all the IC/EC including EC6 and IC2. This step resulted in the exclusion of $66$ studies and the retention of $76$ papers, of which $16$ were classified as "doubtful" due to disagreement between reviewers.
+
+\item \textit{Resolution of doubtful studies}: To resolve the doubtful cases, two additional researchers joined the initial reviewers for a joint discussion and re-assessment based on full-text analysis. After this collaborative review, $14$ studies were excluded, and $2$ were included, resulting in a final set of $62$ selected studies.
+\end{enumerate}
+
+%\paragraph{Quality Assessment} 
+%Table \ref{tab:QC-evaluation} summarizes the results of applying the Quality Criteria to the 41 selected papers. All studies achieved an overall quality score of 3 or higher out of a maximum of 6, indicating a satisfactory level of methodological rigor and reporting quality across the included literature.
+
+\subsubsection{Quality assessment} 
+Each of the $62$ selected papers was independently evaluated by two researchers using the six QCs described in Section \ref{subsec:protocol-definition}. Papers that received a total score below 3 from both researchers were excluded, while those with substantially differing scores or borderline cases (scores between 3 and 4) were discussed collectively by all researchers. Following this process, $41$ studies were retained as the final set of high-quality primary studies included in this review. The complete list of selected papers along with their quality scores is presented in Table \ref{tab:QC-evaluation}.
+
+\subsubsection{Data extraction}  
+
+Given that our RQs (see Section \ref{subsec:protocol-definition}) span the distinct domains of AI and marketing, the review team was composed of experts in both fields. The team collaborated to extract relevant data from each of the 41 selected studies, utilizing the data extraction form presented in Table \ref{tab:DEF}. In cases of uncertainty, disagreements were resolved through discussion to reach a consensus.
+
+The data extraction form and the collected data are publicly accessible online.\footnote{\url{https://docs.google.com/spreadsheets/d/1d6RD3cnYkc6AYOfw-6SbhhxwG-dBsKlVmFowj5EHDg8/edit?usp=sharing}}  
+%\DD{}{Add a link to the spreadsheet with the extracted evidence}
+
+
+\input{tables/QC-evaluation}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/selection-process.pdf}
+    \caption{Studies selection process.}
+    \label{fig:selection-process}
+\end{figure}

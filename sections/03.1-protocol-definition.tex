@@ -1,0 +1,61 @@
+\subsection{Protocol definition}
+\label{subsec:protocol-definition}
+
+\subsubsection{Goal and research questions definition} 
+The goal of this SLR is \textit{to explore the state of the art regarding the application of AI technologies in customer churn prediction in the retail sector, focusing on the techniques employed, the data used, and the perceived effectiveness and limitations}. 
+
+To achieve this goal, we formulated \textcolor{blue}{8 Research Qestions (RQs). These RQs} directly address the core research objectives of our SLR by analyzing the contributions, methodologies, and findings of the selected primary studies. \textcolor{blue}{The 8 RQs are defined as follows.} %\newline
+
+
+\begin{comment}
+\textit{Publication Space RQs (PS-RQs)}:
+\begin{itemize}[label={}, itemsep=1pt, parsep=0pt, topsep=0pt]
+    \item \PSRQone
+    \item \PSRQtwo
+    \item \PSRQthree
+\end{itemize}
+\end{comment}
+
+%\vspace{1em}  % adds vertical space roughly equivalent to one line
+\begin{itemize}[label={}, itemsep=1pt, parsep=0pt, topsep=0pt]
+    \item \RSRQone
+    \item \RSRQtwo
+    \item \RSRQthree
+    \item \RSRQfour
+    \item \RSRQfive
+    \item \RSRQsix
+    \item \RSRQseven
+    \item \RSRQeight
+\end{itemize}
+
+\subsubsection{Digital libraries selection} 
+To identify eligible studies, we queried four premier digital libraries commonly employed in systematic literature reviews: Scopus, Web of Science (WoS), ACM, and IEEE Xplore. Scopus (Elsevier) was chosen for its expansive, interdisciplinary coverage (encompassing over 300+ subject areas) and its stringent selection of peer-reviewed works\footnote{\url{https://www.elsevier.com/products/scopus/content\#3-selection-standards}}. The WoS Core Collection (Clarivate) comprises more than 22,000 journals, applies rigorous evaluation criteria, and has only about 10–12\% acceptance rate for the Science Citation Index Expanded\footnote{\url{https://clarivate.libguides.com/librarianresources/coverage}}. ACM and IEEE are leading professional organizations that publish key journals and conference proceedings, and organize major international scientific conferences in computer science and on artificial intelligence in particular.
+
+\subsubsection{Search string formulation} 
+To systematically construct the search string for identifying primary studies relevant to our SLR, we followed the PICOC (Population, Intervention, Comparison, Outcome, Context) framework proposed by Petersen et al. \cite{PETERSEN20151}. In our case, the \textit{Population} is represented by \textit{Customers} of the retail sector. The \textit{Intervention} focuses on \textit{Artificial Intelligence} techniques, and the desired \textit{Outcome} is the \textit{Churn Prediction}. The \textit{Comparison} viewpoint does not apply to our study as we are not interested in comparing different interventions (e.g., traditional and AI-based approaches to customer churn prediction) while the \textit{Context} viewpoint is represented by the \textit{Retail Sector}, as we are interested in surveying the literature on applications of AI to predict churn of retail customers.
+
+For each main term within the PICOC viewpoints, a list of relevant synonyms, abbreviations, and alternative spellings was identified. The search string was then constructed by combining these terms using AND and OR operators, customized to match the syntax required by the search engine of each selected digital library, and applied to the title, abstract, and keywords fields.
+Following Kitchenham et al.'s \cite{Kitchenham-Charters-guidelines} guidelines, the search string was also validated using three control papers \cite{S19-ID363-Agbemadon, S16-ID325-Matuszelanski, S11-D105-Sunarya} manually selected during a preliminary pilot study.
+
+The resulting PICOC and the search strings customized for the different digital libraries are reported in \ref{subsec:Appendix-PICOC-and-Search-String}.
+
+
+\subsubsection{Inclusion and exclusion criteria definition}  
+Inclusion and exclusion criteria (IC/EC) were defined to delineate the scope of the review. 
+%All studies retrieved from the selected digital libraries were exported and consolidated into a single spreadsheet and manually screened against the IC/EC. 
+A paper retrieved from the selected digital libraries using the defined search string will be retained only if it satisfies all IC and does not meet any EC \cite{Kitchenham-Charters-guidelines}. Specifically, studies will be excluded if they are position papers or short papers; if they are not peer-reviewed; if the full text is not accessible; if they are secondary or tertiary studies such as reviews, mini-reviews, or surveys; if they are duplicates or earlier versions of another candidate paper; or if they primarily replicate or test the methodology of other authors rather than presenting original research. 
+
+To qualify for inclusion, a publication must be written in English, focus specifically on customer churn prediction using artificial intelligence methods, utilize datasets from the retail sector, and base its predictions on customer and/or transactional purchase data.
+
+The IC/EC criteria are reported in detail in \ref{subsec:Appendix-IC-EC}.
+
+
+\subsubsection{Quality assessment criteria definition}
+To ensure that the studies included in this SLR provide methodologically sound and reliable evidence, we defined and applied a set of six Quality Criteria (QCs) following the guidelines proposed by Kitchenham et al. \cite{SEGRESS_Kitchenham_2023}. These criteria assess the methodological rigor, clarity of reporting, and validity of the findings, supporting a transparent evaluation that strengthens the credibility of the review’s conclusions.
+The list of defined QCs, along with the possible scores and their associated rationales, is presented in Table \ref{tab:QC}. The overall quality of each study was determined by summing these scores. 
+\input{tables/QC}
+
+
+\subsubsection{Data extraction form}\nopagebreak
+To facilitate the extraction of evidence from the selected sources, we designed the Data Extraction Form (DEF) reported in Table \ref{tab:DEF}. This form specifies the key pieces of evidence to be identified in the selected papers and systematically recorded to answer each of the defined RQs. To support collaboration among the authors, the DEF was implemented as an online Google spreadsheet.
+\input{tables/DEF}

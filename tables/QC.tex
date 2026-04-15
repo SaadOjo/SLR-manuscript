@@ -1,0 +1,62 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[normalem]{ulem}
+% \useunder{\uline}{\ul}{}
+% nel preambolo:
+
+\begin{table}[H]
+\centering
+\caption{Quality assessment criteria}
+\label{tab:QC}
+\resizebox{0.9\textwidth}{!}{
+\begin{tabular}{
+  |>{\columncolor{lightgray}}p{0.3\textwidth} 
+  |p{0.3\textwidth}
+  |p{0.3\textwidth}
+  |p{0.3\textwidth}
+  |
+}
+  \cline{2-4}
+  \rowcolor{lightgray}
+  \multicolumn{1}{p{0.3\textwidth}|}{\cellcolor{white}} 
+    & \multicolumn{3}{c|}{\raisebox{0.4\height}{\rule{0pt}{3ex}\large{\textbf{Possible scores}}}} \\
+      \hline
+  \rowcolor{lightgray}
+  \raisebox{0.4\height}{\rule{0pt}{3ex}\large{\textbf{Quality Criteria}}}
+    & \multicolumn{1}{c|}{\raisebox{0.4\height}{\rule{0pt}{3ex}{\textbf{Fully satisfied (+1.0)}}}}
+    & \multicolumn{1}{c|}{\raisebox{0.4\height}{\rule{0pt}{3ex}{\textbf{Partially satisfied (+0.5)}}}}
+    & \multicolumn{1}{c|}{\raisebox{0.4\height}{\rule{0pt}{3ex}{\textbf{Not satisfied (+0.0)}}}} \\
+  \hline
+  \textbf{QC1: Is the paper published in a qualified venue?}
+    & The paper is published in a journal ranked in Q1 or Q2 quartile or in a CORE A+ or A Conference 
+    & The paper is published in a venue ranked in Q3 quartile or in a CORE B Conference
+    & The paper is published in a venue ranked in Q4 quartile or in a CORE C or D Conference \\
+  \hline
+  \textbf{QC2: Does the work clearly describe which specific AI techniques have been used to predict Customer Churn?}
+    & The adopted AI technologies are described in detail (not only the specific algorithms are specified, but also details about hyperparameters and experimental settings are provided)
+    & The adopted AI techniques are clearly specified but in a general way, i.e., no additional information on how they were used is provided (such as, hyperparameters setting, experimental setting, etc.)
+    & No specific AI techniques are mentioned (e.g., only the use of clustering or regression methods are mentioned) \\
+  \hline
+  \textbf{QC3: Does the work clearly describe which dataset/variables are used to predict Customer Churn?}
+    & The dataset used for churn prediction is available for download
+    & The dataset used for churn prediction is described in detail but is not available for download
+    & The dataset used for churn prediction is only summarily described or not described at all \\
+  \hline
+  \textbf{QC4: Is class imbalance dataset addressed?}
+    & Class imbalance is handled with appropriate methods and its impact is clearly discussed
+    & Class imbalance is mentioned and partially addressed, but with limited detail or discussion
+    & Class imbalance is not mentioned or addressed \\
+  \hline
+  \textbf{QC5: Have the adopted AI techniques been experimentally evaluated?}
+    & The performance of the adopted AI techniques has been evaluated using a rich set of appropriate metrics
+    & The performance of the adopted AI techniques has been evaluated using a few metrics
+    & The performance of the adopted AI has not been evaluated at all \\
+  \hline
+  \textbf{QC6: Are the results of the study discussed?}
+    & The results are discussed in detail, with clear summaries provided
+    & The results are mentioned but not thoroughly discussed or interpreted.
+    & The results are not discussed or are only mentioned without meaningful analysis. \\
+  \hline
+\end{tabular}%
+}
+\end{table}

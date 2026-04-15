@@ -1,0 +1,270 @@
+%% 
+%% Copyright 2007-2025 Elsevier Ltd
+%% 
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%% 
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.3 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% The list of all files belonging to the 'Elsarticle Bundle' is
+%% given in the file `manifest.txt'.
+%% 
+%% Template article for Elsevier's document class `elsarticle'
+%% with numbered style bibliographic references
+%% SP 2008/03/01
+%% $Id: elsarticle-template-num.tex 272 2025-01-09 17:36:26Z rishi $
+%%
+\documentclass[preprint,12pt]{elsarticle}
+%\documentclass[a4paper,fleqn]{cas-sc}
+%% Use the option review to obtain double line spacing
+%% \documentclass[authoryear,preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn]{elsarticle}
+%% \documentclass[final,3p,times]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn]{elsarticle}
+%% \documentclass[final,5p,times]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn]{elsarticle}
+
+%% For including figures, graphicx.sty has been loaded in
+%% elsarticle.cls. If you prefer to use the old commands
+%% please give \usepackage{epsfig}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}  % ✓
+\newcommand{\xmark}{\ding{55}}  % ✗                
+\usepackage{svg}
+\usepackage{booktabs}         
+\usepackage{array} 
+\usepackage[table]{xcolor}   % colori nelle celle     
+%% The amsmath package provides various useful equation environments.
+\usepackage{amsmath}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers.
+\usepackage{lineno}
+\usepackage{pdfpages}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+%\usepackage{array}
+\usepackage{enumitem}
+\usepackage{makecell}
+%\usepackage{geometry}
+%\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{comment}
+\usepackage{tabularray}
+%\usepackage{pdflscape} 
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{rotating}
+\usepackage{colortbl}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{pdfpages}
+\usepackage{changepage}
+%\usepackage{enumerate}
+%\usepackage[table,xcdraw]{xcolor}  
+\usepackage{url}
+\usepackage[scaled]{helvet}
+%\usepackage{color}
+%\usepackage[colorlinks=true, linkcolor=black, urlcolor=black, citecolor=black, filecolor=black, backref]{hyperref}  
+
+\usepackage{cancel}
+% Beamer presentation requires \usepackage{colortbl} instead of
+\usepackage[normalem]{ulem}
+\usepackage{booktabs}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{graphicx}  
+\usepackage{booktabs,tabularx}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\newcommand{\sid}[1]{\hyperlink{#1}{#1}}
+\def\UrlBreaks{\do\/\do-}
+
+\newcommand{\DD}[2]{\textcolor{blue}{#1}[\textcolor{red}{#2}]}
+\newcommand{\GM}[2]{\textcolor{red}{#1}[\textcolor{teal}{#2}]}
+\newcommand{\NC}[2]{\textcolor{olive}{#1}[\textcolor{olive}{#2}]}
+\newcommand{\SA}[2]{\textcolor{olive}{#1}[\textcolor{magenta}{#2}]}
+
+%\newcommand{\PSRQone}{PS-RQ1: What kind and how many primary studies have been identified per publication year?}
+\newcommand{\PSRQone}{PS-RQ1: How are the primary studies distributed by venue type and publication year?}
+%\newcommand{\PSRQtwo}{PS-RQ2: What are the venues and areas of interest of the primary studies that have been published?}
+\newcommand{\PSRQtwo}{PS-RQ2: What are the venues where the primary studies have been published?}
+%\newcommand{\PSRQthree}{PS-RQ3: What are the authors’ affiliation countries of the selected primary studies?}
+\newcommand{\PSRQthree}{PS-RQ3: How are primary studies distributed across authors’ affiliation countries?}
+
+\newcommand{\RSRQone}{RS-RQ1: What are the adopted definitions of customer churn?}
+\newcommand{\RSRQtwo}{RS-RQ2: What features have been used for customer churn prediction, and which have been found to be more effective?}
+\newcommand{\RSRQthree}{RS-RQ3: How have the available features been pre-processed and/or engineered before analyzing them using AI techniques?}
+\newcommand{\RSRQfour}{RS-RQ4: What AI techniques have been applied and found to be most effective in predicting customer churn in the retail sector?}
+\newcommand{\RSRQfive}{RS-RQ5: What are the most commonly used metrics to evaluate the performance of churn prediction techniques?}
+\newcommand{\RSRQsix}{RS-RQ6: Which publicly available datasets have been used for retail customer churn prediction, and what are their main characteristics?}
+\newcommand{\RSRQseven}{RS-RQ7: What are the challenges and limitations reported in using AI techniques for churn prediction?}
+\newcommand{\RSRQeight}{RS-RQ8: What are the emerging trends and future directions for research in this area?}
+
+\definecolor{lightgray}{HTML}{EFEFEF}
+
+\widowpenalty=10000
+\clubpenalty=10000
+
+\makeatletter
+\renewcommand{\paragraph}[1]{\vspace{1em}\noindent\textit{#1}\par}
+\makeatother
+
+\journal{International Journal of Information Management Data Insight}
+
+\begin{document}
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for theassociated footnote;
+%% use the fnref command within \author or \affiliation for footnotes;
+%% use the fntext command for theassociated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for theassociated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \affiliation{organization={},
+%%             addressline={},
+%%             city={},
+%%             postcode={},
+%%             state={},
+%%             country={}}
+%% \fntext[label3]{}
+
+\title{Artificial Intelligence for Customer Churn Prediction in Non-Contractual Retail Environments: A Systematic Literature Review}
+%\title{Artificial Intelligence for Customer Churn Prediction in Retail Stores: A Systematic Literature Review}
+%\title{Artificial Intelligence for Customer Churn Prediction in the Retail Sector: A Systematic Literature Review}
+
+
+\author[inst1,inst2]{Niccolò Ciucci Colli\corref{cor1}} %% Author name
+\ead{niccolo.ciuccicolli@uniroma1.it}
+\ead{niccolo.ciuccicolli@uniroma1.it}
+\cortext[cor1]{Corresponding author. Tel.: +39 3475029774.}
+\author[inst1,inst2]{Syed Saad Saif}
+\author[inst2]{Giulio Maggiore}
+\author[inst2]{Damiano Distante}
+
+%% use optional labels to link authors explicitly to addresses:
+%% Author affiliation
+\affiliation[inst1]{organization={Department of Computer, Control, and Management Engineering, Sapienza University of Rome},%Department and Organization
+            addressline={Piazzale Aldo Moro, 5}, 
+            city={Rome},
+            postcode={00185}, 
+            %state={Italy},
+            country={Italy}}
+\affiliation[inst2]{organization={Department of Law and Economics, University of Rome UnitelmaSapienza},%Department and Organization
+            addressline={Piazza Sassari, 4}, 
+            city={Rome},
+            postcode={00161}, 
+            %state={Italy},
+            country={Italy}}
+
+
+%% Abstract
+%\begin{abstract}
+%% Text of abstract
+%\input{sections/00-abstract}
+%\end{abstract}
+
+%%Graphical abstract
+%\begin{graphicalabstract}
+%\includegraphics{grabs}
+%\end{graphicalabstract}
+
+
+%Research highlights
+\
+
+
+
+
+%Comprehensive SLR answering 8 research questions on AI applied to churn prediction
+%Comprehensive SLR on AI for churn prediction  techniques, data, metrics, and challenges
+%8 research questions
+%Comprehensive SLR on AI applied to customer churn prediction (techniques, data/features, metrics, challenges)
+%Comprehensive SLR answering 8 RQ on AI applied to customer churn prediction 
+%Comprehensive SLR on AI techniques, datasets, features, metrics, challenges, and future directions
+%Reviewed the state-of-the-art of AI techniques for retail customer churn prediction 
+%Hetero geneous churn definitions hinder cross-study comparability
+
+
+%\begin{highlights}
+%\item Comprehensive SLR answering 11 research questions on AI applied to churn prediction
+%\item Random Forest, XGBoost, and ANNs best methods; newer models remain under-explored
+%\item Transactional, demographics, and behavioral features are the most commonly used
+%\item Static definition of churn is most used, as opposed to customer-tailored ones
+%\item Data scarcity, reproducibility, and model explainability still limit real-world use 
+%\end{highlights}
+
+%% Keywords
+%\begin{keyword}
+%% keywords here, in the form: keyword \sep keyword
+%artificial intelligence \sep customer churn prediction \sep retail sector \sep non-contractual environment \sep systematic literature review  
+%% PACS codes here, in the form: \PACS code \sep code
+%\PACS 0000 \sep 1111
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+%\MSC 0000 \sep 1111
+%\end{keyword}
+
+
+\end{frontmatter}
+
+%% Add \usepackage{lineno} before \begin{document} and uncomment 
+%% following line to enable line numbers
+%\linenumbers
+%% main text
+\begin{comment}
+\input{sections/01-introduction}
+\input{sections/02-background}
+\input{sections/03-methodology}
+\input{sections/04-results}
+\input{sections/05-discussion}
+\input{sections/06-threats-to-validity}
+\input{sections/07-conclusions}
+
+%% If you have bib database file and want bibtex to generate the
+%% bibitems, please use
+%%
+\bibliographystyle{elsarticle-num} 
+\bibliography{bibliography}
+
+
+\newpage
+\input{sections/08-appendix}
+
+\end{comment}
+
+\input{sections/08-acknowledgements}
+\end{document}
+\endinput
+%%
+%% End of file `elsarticle-template-num.tex'.

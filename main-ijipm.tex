@@ -1,0 +1,302 @@
+%% 
+%% Copyright 2019-2020 Elsevier Ltd
+%% 
+%% This file is part of the 'CAS Bundle'.
+%% --------------------------------------
+%% 
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% The list of all files belonging to the 'CAS Bundle' is
+%% given in the file `manifest.txt'.
+%% 
+%% Template article for cas-sc documentclass for 
+%% double column output.
+
+%\documentclass[a4paper,fleqn,longmktitle]{cas-sc}
+\documentclass[a4paper,fleqn]{cas-sc}
+
+% \usepackage[numbers]{natbib}
+%\usepackage[authoryear]{natbib}
+\usepackage[authoryear,longnamesfirst]{natbib}
+\usepackage{amssymb}
+\usepackage{pifont}
+\usepackage[section]{placeins} % oppure senza [section]
+
+\newcommand{\cmark}{\ding{51}}  % ✓
+\newcommand{\xmark}{\ding{55}}  % ✗                
+\usepackage{svg}
+\usepackage{booktabs}         
+\usepackage{array} 
+\usepackage[table]{xcolor}   % colori nelle celle     
+%% The amsmath package provides various useful equation environments.
+\usepackage{amsmath}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers.
+\usepackage{lineno}
+\usepackage{pdfpages}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+%\usepackage{array}
+\usepackage{enumitem}
+\usepackage{makecell}
+%\usepackage{geometry}
+%\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{comment}
+\usepackage{tabularray}
+%\usepackage{pdflscape} 
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{rotating}
+\usepackage{colortbl}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{pdfpages}
+\usepackage{changepage}
+%\usepackage{enumerate}
+%\usepackage[table,xcdraw]{xcolor}  
+\usepackage{url}
+\usepackage[scaled]{helvet}
+%\usepackage{color} 
+
+\usepackage{cancel}
+% Beamer presentation requires \usepackage{colortbl} instead of
+\usepackage[normalem]{ulem}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{graphicx}  
+\usepackage{booktabs,tabularx}
+\usepackage{hyperref}
+\newcommand{\sid}[1]{\hyperlink{#1}{#1}}
+\def\UrlBreaks{\do\/\do-}
+
+\newcommand{\DD}[2]{\textcolor{blue}{#1}[\textcolor{red}{#2}]}
+\newcommand{\GM}[2]{\textcolor{red}{#1}[\textcolor{teal}{#2}]}
+\newcommand{\NC}[2]{\textcolor{olive}{#1}[\textcolor{olive}{#2}]}
+\newcommand{\SA}[2]{\textcolor{olive}{#1}[\textcolor{magenta}{#2}]}
+
+%\newcommand{\PSRQone}{PS-RQ1: What kind and how many primary studies have been identified per publication year?}
+\newcommand{\PSRQone}{RQ1: How are the primary studies distributed by venue type and publication year?}
+%\newcommand{\PSRQtwo}{PS-RQ2: What are the venues and areas of interest of the primary studies that have been published?}
+\newcommand{\PSRQtwo}{RQ2: What are the venues where the primary studies have been published?}
+%\newcommand{\PSRQthree}{PS-RQ3: What are the authors’ affiliation countries of the selected primary studies?}
+\newcommand{\PSRQthree}{RQ3: How are primary studies distributed across authors’ affiliation countries?}
+
+\newcommand{\RSRQone}{RQ1: What are the adopted definitions of customer churn?}
+\newcommand{\RSRQtwo}{RQ2: What features have been used for customer churn prediction, and which have been found to be more effective?}
+\newcommand{\RSRQthree}{RQ3: How have the available features been pre-processed and/or engineered before analyzing them using AI techniques?}
+\newcommand{\RSRQfour}{RQ4: What AI techniques have been applied and found to be most effective in predicting customer churn in the retail sector?}
+\newcommand{\RSRQfive}{RQ5: What are the most commonly used metrics to evaluate the performance of churn prediction techniques?}
+\newcommand{\RSRQsix}{RQ6: Which publicly available datasets have been used for retail customer churn prediction, and what are their main characteristics?}
+\newcommand{\RSRQseven}{RQ7: What are the challenges and limitations reported in using AI techniques for churn prediction?}
+\newcommand{\RSRQeight}{RQ8: What are the emerging trends and future directions for research in this area?}
+
+\definecolor{lightgray}{HTML}{EFEFEF}
+
+\widowpenalty=10000
+\clubpenalty=10000
+
+%%%Author definitions
+\def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
+\tsc{WGM}
+\tsc{QE}
+\tsc{EP}
+\tsc{PMS}
+\tsc{BEC}
+\tsc{DE}
+%%%
+
+% Uncomment and use as if needed
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newdefinition{rmk}{Remark}
+%\newproof{pf}{Proof}
+%\newproof{pot}{Proof of Theorem \ref{thm}}
+
+\begin{document}
+\hypersetup{colorlinks=true, linkcolor=blue}
+%\let\WriteBookmarks\relax
+%\def\floatpagepagefraction{1}
+%\def\textpagefraction{.001}
+
+% Short title
+\shorttitle{}
+
+% Short author
+\shortauthors{}
+
+% Main title of the paper
+\title [mode = title]{Artificial Intelligence for Customer Churn Prediction in Non-Contractual Retail Environments: A Systematic Literature Review}                      
+% Title footnote mark
+% eg: \tnotemark[1]
+%\tnotemark[1,2]
+
+% Title footnote 1.
+% eg: \tnotetext[1]{Title footnote text}
+% \tnotetext[<tnote number>]{<tnote text>} 
+%\tnotetext[1]{This document is the results of the research
+%   project funded by the National Science Foundation.}
+
+%\tnotetext[2]{The second title footnote which is a longer text matter
+%   to fill through the whole text width and overflow into
+%   another line in the footnotes area of the first page.}
+
+\begin{comment}
+
+% First author
+%
+% Options: Use if required
+% eg: \author[1,3]{Author Name}[type=editor,
+%       style=chinese,
+%       auid=000,
+%       bioid=1,
+%       prefix=Sir,
+%       orcid=0000-0000-0000-0000,
+%       facebook=<facebook id>,
+%       twitter=<twitter id>,
+%       linkedin=<linkedin id>,
+%       gplus=<gplus id>]
+\author[1,3]{CV Radhakrishnan}[type=editor,
+                        auid=000,bioid=1,
+                        prefix=Sir,
+                        role=Researcher,
+                        orcid=0000-0001-7511-2910]
+
+% Corresponding author indication
+\cormark[1]
+
+% Footnote of the first author
+\fnmark[1]
+
+% Email id of the first author
+\ead{cvr_1@tug.org.in}
+
+% URL of the first author
+\ead[url]{www.cvr.cc, cvr@sayahna.org}
+
+%  Credit authorship
+\credit{Conceptualization of this study, Methodology, Software}
+
+% Address/affiliation
+\affiliation[1]{organization={Elsevier B.V.},
+    addressline={Radarweg 29}, 
+    city={Amsterdam},
+    % citysep={}, % Uncomment if no comma needed between city and postcode
+    postcode={1043 NX}, 
+    % state={},
+    country={The Netherlands}}
+
+% Second author
+\author[2,4]{Han Theh Thanh}[style=chinese]
+
+% Third author
+\author[2,3]{CV Rajagopal}[%
+   role=Co-ordinator,
+   suffix=Jr,
+   ]
+\fnmark[2]
+\ead{cvr3@sayahna.org}
+\ead[URL]{www.sayahna.org}
+
+\credit{Data curation, Writing - Original draft preparation}
+
+% Address/affiliation
+\affiliation[2]{organization={Sayahna Foundation},
+    % addressline={}, 
+    city={Jagathy},
+    % citysep={}, % Uncomment if no comma needed between city and postcode
+    postcode={695014}, 
+    state={Trivandrum},
+    country={India}}
+
+% Fourth author
+\author%
+[1,3]
+{Rishi T.}
+\cormark[2]
+\fnmark[1,3]
+\ead{rishi@stmdocs.in}
+\ead[URL]{www.stmdocs.in}
+
+\affiliation[3]{organization={STM Document Engineering Pvt Ltd.},
+    addressline={Mepukada}, 
+    city={Malayinkil},
+    % citysep={}, % Uncomment if no comma needed between city and postcode
+    postcode={695571}, 
+    state={Trivandrum},
+    country={India}}
+
+% Corresponding author text
+\cortext[cor1]{Corresponding author}
+\cortext[cor2]{Principal corresponding author}
+
+% Footnote text
+\fntext[fn1]{This is the first author footnote. but is common to third
+  author as well.}
+\fntext[fn2]{Another author footnote, this is a very long footnote and
+  it should be a really long footnote. But this footnote is not yet
+  sufficiently long enough to make two lines of footnote text.}
+
+\end{comment}
+% Here goes the abstract
+\begin{abstract}
+    \ExplSyntaxOn
+    \input{sections/00-abstract}
+  \ExplSyntaxOff
+\end{abstract}
+
+% Use if graphical abstract is present
+% \begin{graphicalabstract}
+% \includegraphics{figs/grabs.pdf}
+% \end{graphicalabstract}
+
+% Research highlights
+\begin{highlights}
+\item Comprehensive SLR answering 8 research questions on AI applied to churn prediction
+\item Random Forest, XGBoost, and ANNs best methods; newer models remain under-explored
+\item Transactional, demographics, and behavioral features are the most commonly used
+\item Static definition of churn is most used, as opposed to customer-tailored ones
+\item Data scarcity, reproducibility, and model explainability still limit real-world use 
+\end{highlights}
+
+% Keywords
+% Each keyword is seperated by \sep
+\begin{keywords}
+artificial intelligence \sep customer churn prediction \sep retail sector \sep non-contractual environment \sep systematic literature review 
+\end{keywords}
+
+
+\maketitle
+
+\input{sections/01-introduction}
+\input{sections/02-background}
+\input{sections/03-methodology}
+\input{sections/04-results}
+\input{sections/05-discussion}
+\input{sections/06-threats-to-validity}
+\input{sections/07-conclusions}
+\printcredits
+
+%% Loading bibliography style file
+% \bibliographystyle{model1-num-names}
+\bibliographystyle{cas-model2-names}
+% Loading bibliography database
+\bibliography{bibliography}
+
+\appendix
+\input{sections/09-appendix}
+
+\end{document}
+

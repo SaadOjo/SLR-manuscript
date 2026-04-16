@@ -1,0 +1,44 @@
+\begin{table}[t]
+\centering
+\caption{Summary of the main discussion points and future research directions.}
+\label{tab:discussion-summary}
+\scriptsize
+\renewcommand{\arraystretch}{1.15}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|
+>{\raggedright\arraybackslash}p{3.1cm}|
+>{\raggedright\arraybackslash}p{5.2cm}|
+>{\raggedright\arraybackslash}p{4.8cm}|
+>{\raggedright\arraybackslash}p{4.8cm}|}
+\hline
+\rowcolor{lightgray}
+\textbf{Discussion theme} & \textbf{Main discussion findings} & \textbf{Key implications / open issues} & \textbf{Future research directions} \\ \hline
+
+\textbf{Churn definitions in retail} &
+The reviewed studies adopt heterogeneous churn definitions, often tailored to retailer type and sector. Static definitions remain common, but customer-specific and dynamic definitions may better capture behavior in contexts with seasonal or irregular purchasing patterns. &
+The lack of a shared operationalization of churn limits comparability across studies and may affect model performance when the same definition is transferred across retail contexts. &
+Develop clearer and more transparent reporting of churn operationalization; explore context-sensitive and dynamic churn definitions better aligned with customer behavior in different retail settings. \\ \hline
+
+\textbf{AI techniques for churn prediction} &
+Most studies rely on conventional ML methods. Tree-based models and neural networks frequently emerge as strong candidates, but no single technique consistently dominates across contexts. Results are influenced by dataset characteristics, class imbalance, feature engineering, and implementation differences. &
+Cross-study comparisons remain difficult because datasets, churn definitions, model configurations, and evaluation setups vary substantially. Grouping methods into broad families may hide important architectural differences. &
+Expand comparisons to more recent architectures (e.g., transformers, deeper neural networks, hybrid models) under more controlled and transparent experimental settings. \\ \hline
+
+\textbf{Retail channel context: e-commerce vs. brick-and-mortar} &
+Research is more prevalent in e-commerce, where customer activity leaves rich digital traces. Brick-and-mortar settings rely more heavily on transactional data and loyalty-program linkage, which limits the granularity of observable customer behavior. Omnichannel integration offers additional potential. &
+The richness of available data differs strongly by retail channel, affecting both feasible modeling strategies and expected predictive performance. Some e-commerce studies still underuse available web-navigation signals. &
+Promote cross-channel and omnichannel studies; integrate transactional and behavioral data; better exploit digital behavioral signals where available; investigate how models transfer across retail formats. \\ \hline
+
+\textbf{Data availability, comparability, and generalizability} &
+Across the review, most studies follow a similar predictive pipeline, but model choice is strongly conditioned by available data and by study-specific churn definitions. Reusable benchmarks remain scarce, and many studies rely on single-source, context-specific datasets. &
+Limited public data and context-specific evidence constrain reproducibility, comparability, and generalizability across retail sectors and countries. Evidence accumulation remains fragmented. &
+Encourage the release of reusable benchmark datasets, richer dataset documentation, and data/domain augmentation across retail sectors to improve transferability of findings. \\ \hline
+
+\textbf{Evaluation and business relevance} &
+The literature mainly relies on standard classification metrics to assess performance. However, future-oriented studies increasingly call for explainability, ROI-aware evaluation, and validation in real-world settings. &
+Good predictive performance does not automatically translate into actionable customer-retention value. The connection between model accuracy, intervention cost, and business impact is still weakly addressed. &
+Move toward explainable, cost-sensitive, and ROI-aware evaluation designs, and validate churn-prediction models in real deployment settings. \\ \hline
+
+\end{tabular}
+}
+\end{table}
